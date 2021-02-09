@@ -10,6 +10,18 @@ public class Main{
 		bokKwadratu = sc.nextInt();
 		wynikPola = bokKwadratu * bokKwadratu;
 		wynikObwodu = bokKwadratu * 4;
+		int s = bokKwadratu;
+		int w = bokKwadratu;
+		
+		for (int i = 0; i < w; i++)
+        {
+            for (int j = 0; j < s; j++)
+                if((i == 0)||(i == w-1))
+                    System.out.print('*');
+                else if((j == 0)||(j == s-1))System.out.print('*');
+                else System.out.print(' '); 
+                System.out.println();
+        }
 		
 		System.out.println("Pole kwadratu: "+wynikPola+", Obwod Kwadratu: "+wynikObwodu);
 		
@@ -25,6 +37,18 @@ public class Main{
 		wysokosc = sc.nextInt();
 		poleProstokota = szerokosc * wysokosc;
 		obwodProstokota = szerokosc + szerokosc + wysokosc + wysokosc;
+		for (int i = 0; i < wysokosc; i++)
+        {
+            for (int j = 0; j < szerokosc; j++)
+                if((i == 0)||(i == wysokosc-1))
+                    System.out.print('*');
+                else if((j == 0)||(j == szerokosc-1))System.out.print('*');
+                else System.out.print(' '); 
+                System.out.println();
+
+        }
+		System.out.println("Pole = "+poleProstokota);
+		System.out.println("Obwod = "+obwodProstokota);
 	}
 	
 	public static void main(String[] args){
